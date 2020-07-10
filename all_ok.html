@@ -62,7 +62,7 @@
                 
             }
             
-            function requestOrientationPermission(){
+            mraid.requestOrientationPermission(){
                 DeviceOrientationEvent.requestPermission()
                 .then(response => {
                     if (response == 'granted') {
@@ -113,6 +113,6 @@
     <button onclick='console.log(mraid.readyToShowAR());'>Ready To Show AR</a><br/>
     <button onclick='console.log(mraid.setOrientationProperties({allowOrientationChange: false, forceOrientation: "portrait"}));'>Set Orientation Properties</a><br/>
     <button onclick='console.log(mraid.supports());'>Supports</a><br/>
-    <button onclick='requestOrientationPermission();'>Request Device Orientation Events</a><br/>
+    <button onclick='mraid.requestOrientationPermission();'>Request Device Orientation Events</a><br/>
 </body>
 </html>
