@@ -61,18 +61,6 @@
               //const audio = new (window.AudioContext || window.webkitAudioContext);
                 
             }
-            
-            mraid.requestOrientationPermission = function() {
-                DeviceOrientationEvent.requestPermission()
-                .then(response => {
-                    if (response == 'granted') {
-                        window.addEventListener('deviceorientation',function(event) {
-                          console.log(event.alpha + ' : ' + event.beta + ' : ' + event.gamma);
-                        });
-                    }
-                })
-                .catch(console.error)
-            }
         }
       })()
     </script>
@@ -113,6 +101,5 @@
     <button onclick='console.log(mraid.readyToShowAR());'>Ready To Show AR</a><br/>
     <button onclick='console.log(mraid.setOrientationProperties({allowOrientationChange: false, forceOrientation: "portrait"}));'>Set Orientation Properties</a><br/>
     <button onclick='console.log(mraid.supports());'>Supports</a><br/>
-    <button onclick='mraid.requestOrientationPermission();'>Request Device Orientation Events</a><br/>
 </body>
 </html>
