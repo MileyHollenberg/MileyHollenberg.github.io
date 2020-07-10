@@ -62,7 +62,7 @@
                 
             }
             
-            mraid.requestOrientationPermission(){
+            mraid.requestOrientationPermission = function() {
                 DeviceOrientationEvent.requestPermission()
                 .then(response => {
                     if (response == 'granted') {
